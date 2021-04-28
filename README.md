@@ -1,6 +1,6 @@
 # ServerStats-Bot-Discord.js
 
-<img src="https://bit.ly/2R6firm" alt="" />
+<img src="https://www.pngfind.com/pngs/m/102-1026997_jeffy-discordjs-discord-js-logo-hd-png-download.png" alt="" />
 
 Simple server stats bot, You can change a little of the code written in this repository, because it is open source. And this is for my [Youtube Channel](https://bit.ly/Henry_Youtube) too.
 
