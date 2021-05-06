@@ -21,10 +21,13 @@ let stats = {
 async function ServerStats() {
     // Getting Guild
     var Guild = client.guilds.cache.get(stats.Guild_ID);
-    // Getting Total members channel for MemberCount
+    // Getting how much users and bots
+    var Users = Guild.members.cache.filter(m => !m.user.bot).size;
+    var Bots = Guild.members.cache.filter(m => m.user.bot).size;
+    // Getting Total channel for MemberCount
     await Guild.channels.cache.get(stats.Total_Members).setName('Total Members: ' + Guild.memberCount);
     // Getting Members channel for users count
-    await Guild.channels.cache.get(stats.Members).setName('Members: ' +  Guild.members.cache.filter(m => !m.user.bot).size);
+    await Guild.channels.cache.get(stats.Members).setName('Members: ' + Users);
     // Getting Bots channel for bots count
-    await Guild.channels.cache.get(stats.Bots).setName('Bots: ' + Guild.members.cache.filter(m => m.user.bot).size);
+    await Guild.channels.cache.get(stats.Bots).setName('Bots: ' + Bots);
 }
